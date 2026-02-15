@@ -1,6 +1,17 @@
 from typing import Any
 
 from pypst.cell import Cell
+from pypst.color import (
+    ColorPredefined,
+    ColorLuma,
+    ColorOklab,
+    ColorOklch,
+    ColorLinearRGB,
+    ColorRGB,
+    ColorCMYK,
+    ColorHSL,
+    ColorHSV,
+)
 from pypst.content import Content
 from pypst.document import Document
 from pypst.figure import Figure
@@ -30,6 +41,15 @@ def __getattr__(name: str) -> Any:
 
 __all__ = [
     "Cell",
+    "ColorPredefined",
+    "ColorLuma",
+    "ColorOklab",
+    "ColorOklch",
+    "ColorLinearRGB",
+    "ColorRGB",
+    "ColorCMYK",
+    "ColorHSL",
+    "ColorHSV",
     "Content",
     "Degree",
     "Document",
