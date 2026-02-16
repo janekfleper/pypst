@@ -20,7 +20,7 @@ from pypst.functional import Functional
 from pypst.heading import Heading
 from pypst.image import Image
 from pypst.itemize import Enumerate, Itemize
-from pypst.quantity import Degree, Fraction, Quantity, Radian, Ratio
+from pypst.quantity import Degree, Fraction, Length, Quantity, Radian, Ratio
 from pypst.renderable import Plain, Renderable
 from pypst.set_rule import SetRule
 from pypst.show_rule import ShowRule
@@ -60,6 +60,7 @@ __all__ = [
     "Fraction",
     "Functional",
     "Heading",
+    "Length",
     "Image",
     "Itemize",
     "Quantity",

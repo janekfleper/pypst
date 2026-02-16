@@ -60,6 +60,23 @@ class Quantity:
 
 
 @dataclass
+class Length(Quantity):
+    """
+    A quantity for lengths.
+
+    Typst supports the length units pt, mm, cm, in, and em (font size).
+
+    Args:
+        value: The value of the length.
+        unit: The unit of the length.
+        scale: The scale of the length.
+        digits: The number of digits to round the length to.
+    """
+
+    pass
+
+
+@dataclass
 class Fraction(Quantity):
     """
     A quantity for relative layout spacing.
