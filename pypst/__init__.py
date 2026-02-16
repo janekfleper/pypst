@@ -24,6 +24,7 @@ from pypst.quantity import Degree, Fraction, Length, Quantity, Radian, Ratio
 from pypst.renderable import Plain, Renderable
 from pypst.set_rule import SetRule
 from pypst.show_rule import ShowRule
+from pypst.stroke import Dash, Stroke
 
 try:
     from pypst.table import Table  # needed to be included in code completion
@@ -53,6 +54,7 @@ __all__ = [
     "ColorHSL",
     "ColorHSV",
     "Content",
+    "Dash",
     "Degree",
     "Document",
     "Enumerate",
@@ -70,6 +72,7 @@ __all__ = [
     "Renderable",
     "SetRule",
     "ShowRule",
+    "Stroke",
     "Table",
 ]
 __version__ = "0.8.0"
