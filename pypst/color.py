@@ -35,7 +35,16 @@ OPTIONAL_FIELD_METADATA: dict[str, bool] = {"positional": True, "keep_none": Fal
 
 
 @dataclass
-class ColorPredefined:
+class Color(Function):
+    """
+    Base class for all colors.
+    """
+
+    pass
+
+
+@dataclass
+class ColorPredefined(Color):
     """
     Colors that are predefined in Typst.
 
@@ -61,7 +70,7 @@ class ColorPredefined:
 
 
 @dataclass
-class ColorLuma(Function):
+class ColorLuma(Color):
     """
     Grayscale colors.
 
@@ -82,7 +91,7 @@ class ColorLuma(Function):
 
 
 @dataclass
-class ColorOklab(Function):
+class ColorOklab(Color):
     """
     Oklab colors.
 
@@ -107,7 +116,7 @@ class ColorOklab(Function):
 
 
 @dataclass
-class ColorOklch(Function):
+class ColorOklch(Color):
     """
     Oklch colors.
 
@@ -132,7 +141,7 @@ class ColorOklch(Function):
 
 
 @dataclass
-class ColorLinearRGB(Function):
+class ColorLinearRGB(Color):
     """
     RGB colors with linear luma.
 
@@ -157,7 +166,7 @@ class ColorLinearRGB(Function):
 
 
 @dataclass
-class ColorRGB(Function):
+class ColorRGB(Color):
     """
     RGB colors.
 
@@ -186,7 +195,7 @@ class ColorRGB(Function):
 
 
 @dataclass
-class ColorCMYK(Function):
+class ColorCMYK(Color):
     """
     CMYK colors.
 
@@ -209,7 +218,7 @@ class ColorCMYK(Function):
 
 
 @dataclass
-class ColorHSL(Function):
+class ColorHSL(Color):
     """
     HSL colors.
 
@@ -234,7 +243,7 @@ class ColorHSL(Function):
 
 
 @dataclass
-class ColorHSV(Function):
+class ColorHSV(Color):
     """
     HSV colors.
 

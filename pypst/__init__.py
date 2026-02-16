@@ -2,6 +2,7 @@ from typing import Any
 
 from pypst.cell import Cell
 from pypst.color import (
+    Color,
     ColorPredefined,
     ColorLuma,
     ColorOklab,
@@ -41,6 +42,7 @@ def __getattr__(name: str) -> Any:
 
 __all__ = [
     "Cell",
+    "Color",
     "ColorPredefined",
     "ColorLuma",
     "ColorOklab",
