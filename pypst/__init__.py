@@ -1,5 +1,7 @@
 from typing import Any
 
+from pypst.block import Block
+from pypst.box import Box
 from pypst.cell import Cell
 from pypst.color import (
     Color,
@@ -20,6 +22,7 @@ from pypst.functional import Functional
 from pypst.heading import Heading
 from pypst.image import Image
 from pypst.itemize import Enumerate, Itemize
+from pypst.place import Place
 from pypst.quantity import Degree, Fraction, Length, Quantity, Radian, Ratio
 from pypst.renderable import Plain, Renderable
 from pypst.set_rule import SetRule
@@ -42,6 +45,8 @@ def __getattr__(name: str) -> Any:
 
 
 __all__ = [
+    "Block",
+    "Box",
     "Cell",
     "Color",
     "ColorPredefined",
@@ -65,6 +70,7 @@ __all__ = [
     "Length",
     "Image",
     "Itemize",
+    "Place",
     "Quantity",
     "Radian",
     "Ratio",
