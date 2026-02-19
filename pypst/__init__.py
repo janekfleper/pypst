@@ -1,5 +1,6 @@
 from typing import Any
 
+from pypst.binding import Binding
 from pypst.block import Block
 from pypst.box import Box
 from pypst.cell import Cell
@@ -45,6 +46,7 @@ def __getattr__(name: str) -> Any:
 
 
 __all__ = [
+    "Binding",
     "Block",
     "Box",
     "Cell",
