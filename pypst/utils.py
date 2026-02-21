@@ -198,12 +198,19 @@ def render_dataclass(arg: Any) -> str:
         def is_positional(field: Field) -> bool:
             return field.metadata.get("positional", False)
 
-        arguments = ", ".join(
-            value(field) if is_positional(field) else f"{name(field)}: {value(field)}"
-            for field in fields
-        )
+        def is_variadic(field: Field) -> bool:
+            return field.metadata.get("variadic", False)
 
-        rendered = f"#{function}({arguments})"
+        arguments = []
+        for field in fields:
+            if is_positional(field):
+                arguments.append(value(field))
+            elif is_variadic(field):
+                arguments.extend([render_code(v) for v in getattr(arg, field.name)])
+            else:
+                arguments.append(f"{name(field)}: {value(field)}")
+
+        rendered = f"#{function}({', '.join(arguments)})"
     else:
         mapping = render_mapping(
             {name(field): getattr(arg, field.name) for field in fields}

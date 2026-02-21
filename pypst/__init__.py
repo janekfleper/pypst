@@ -20,6 +20,14 @@ from pypst.content import Content
 from pypst.document import Document
 from pypst.figure import Figure
 from pypst.functional import Functional
+from pypst.grid import (
+    Grid,
+    GridCell,
+    GridHorizontalLine,
+    GridVerticalLine,
+    GridHeader,
+    GridFooter,
+)
 from pypst.heading import Heading
 from pypst.image import Image
 from pypst.itemize import Enumerate, Itemize
@@ -71,6 +79,12 @@ __all__ = [
     "Figure",
     "Fraction",
     "Functional",
+    "Grid",
+    "GridCell",
+    "GridFooter",
+    "GridHorizontalLine",
+    "GridHeader",
+    "GridVerticalLine",
     "Heading",
     "Length",
     "Image",
