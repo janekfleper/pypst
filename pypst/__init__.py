@@ -26,8 +26,11 @@ from pypst.itemize import Enumerate, Itemize
 from pypst.place import Place
 from pypst.quantity import Degree, Fraction, Length, Quantity, Radian, Ratio
 from pypst.renderable import Plain, Renderable
+from pypst.rotate import Rotate
+from pypst.scale import Scale
 from pypst.set_rule import SetRule
 from pypst.show_rule import ShowRule
+from pypst.skew import Skew
 from pypst.stroke import Dash, Stroke
 
 try:
@@ -78,7 +81,10 @@ __all__ = [
     "Ratio",
     "Plain",
     "Renderable",
+    "Rotate",
+    "Scale",
     "SetRule",
+    "Skew",
     "ShowRule",
     "Stroke",
     "Table",
