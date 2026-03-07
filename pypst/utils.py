@@ -106,7 +106,10 @@ def render_sequence(arg: Iterable[Any]) -> str:
     """
     Render a sequence of any object supported by `render`.
     """
-    return f"({', '.join(render_code(a) for a in arg)})"
+    args = [render_code(a) for a in arg]
+    if len(args) == 1:
+        return f"({args[0]},)"
+    return f"({', '.join(args)})"
 
 
 def render_datetime(arg: date | datetime) -> str:
