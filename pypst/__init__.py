@@ -40,6 +40,7 @@ from pypst.set_rule import SetRule
 from pypst.show_rule import ShowRule
 from pypst.skew import Skew
 from pypst.stroke import Dash, Stroke
+from pypst.text import Text
 
 try:
     from pypst.table import Table  # needed to be included in code completion
@@ -102,5 +103,6 @@ __all__ = [
     "ShowRule",
     "Stroke",
     "Table",
+    "Text",
 ]
 __version__ = "0.8.0"
