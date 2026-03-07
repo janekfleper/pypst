@@ -56,7 +56,7 @@ class ColorPredefined(Color):
         >>> ColorPredefined("red").render()
         'red'
         >>> ColorPredefined("blue", alpha=Ratio(0.9)).render()
-        'blue.transparentize(90.0%)'
+        'blue.transparentize(10.0%)'
     """
 
     color: str
@@ -65,7 +65,8 @@ class ColorPredefined(Color):
     def render(self) -> str:
         color = self.color
         if self.alpha is not None:
-            color = f"{color}.transparentize({self.alpha.render()})"
+            transparency = Ratio(1 - self.alpha.value)
+            color = f"{color}.transparentize({transparency.render()})"
         return color
 
 
