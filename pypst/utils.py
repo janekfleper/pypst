@@ -186,7 +186,7 @@ def render_dataclass(arg: Any) -> str:
     fields = dataclass_fields_to_render(arg)
 
     def name(field: Field) -> str:
-        return field.metadata.get("name", field.name)
+        return field.metadata.get("name", field.name).replace("_", "-")
 
     def value(field: Field) -> str:
         return render_code(getattr(arg, field.name))
