@@ -76,7 +76,7 @@ class Dash:
             return "none"
 
         if self.pattern is not None:
-            return self.pattern
+            return f'"{self.pattern}"'
 
         if self.phase is None:
             return utils.render_sequence(self.array)
