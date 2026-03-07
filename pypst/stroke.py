@@ -118,7 +118,7 @@ class Stroke:
             and self.miter_limit is None
         ):
             if self.paint is None and self.thickness is None:
-                raise ValueError("Either paint or thickness must be provided")
+                return "none"
             if self.paint is None:
                 return self.thickness.render()
             if self.thickness is None:
