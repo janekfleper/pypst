@@ -194,6 +194,15 @@ class ColorRGB(Color):
     alpha: int | Ratio | None = field(default=None, metadata=OPTIONAL_FIELD_METADATA)
     hex: str | None = field(default=None, metadata=OPTIONAL_FIELD_METADATA)
 
+    def render(self) -> str:
+        if self.hex is not None:
+            color = f"color.rgb({self.hex})"
+            if self.alpha is not None:
+                color += f".transparentize({Ratio(1 - self.alpha.value).render()})"
+            return color
+
+        return super().render()
+
 
 @dataclass
 class ColorCMYK(Color):
